@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--Style sheet for accordion-->
+    <link href="style.css" rel="stylesheet"> <!-- Styling for majority of components-->
+    <link rel="stylesheet" href="https://use.typekit.net/son1zgm.css"><!--Stylesheet for fonts-->
+    
+    <title>Kacy's Webpage</title>
+    <!-- For the Carousel. Following https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_carousel&stacked=h -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <section id="section-2">
+        <!-- Mountain 1-->
+        <div id="hero">
+            <img src="img/HeroImage.jpg" alt="Professional Photo of Kacy Metcalf" class="responsive">
+
+            <div class="overlay">KACY</div>
+            <div class="overlay2">METCALF</div>
+            <div class="initialLogo">
+                <img src="img/Logo.png" alt="Los Angeles Mountains Logo">
+            </div>
+            <div class="overlay3">
+                <div class="links">
+                    <a href="#history"><u><i>0.1 Software Engineering</i></u></a> <!-- how to link to page sections https://www.w3docs.com/snippets/html/how-to-create-an-anchor-link-to-jump-to-a-specific-part-of-a-page.html -->
+                    <a href="#team"><u><i>0.2 Leadership</i></u></a><br />
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section>
+        <div id="navbar">
+            <img src="img/Logo.png" alt="Logo for LA Mountains">
+            <p id="la"> LOSANGELES </p>
+            <p id="mountain"> MOUNTAINS</p>
+            <div id="sticky-links">
+                <a href="#team"><u><i>0.2 Team</i></u></a>
+                <a href="#history"><u><i>0.1 History</i></u></a> <!-- how to link to page sections https://www.w3docs.com/snippets/html/how-to-create-an-anchor-link-to-jump-to-a-specific-part-of-a-page.html -->
+            </div>
+            
+        </div>
+         <script>
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
+            // Get the navbar
+            var navbar = document.getElementById("navbar");
+            // Get the offset position of the navbar
+            var sticky = navbar.offsetTop;
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+        </script>
+    </section>
+    <section class="mid-section" id="history">
+        <!-- HISTORY -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>   
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="img/slide1.png" alt="Snow Near Los Angeles Mountain">
+              </div>
+          
+              <div class="item">
+                <img src="img/slide2.png" alt="Los Angeles Weather">
+              </div>
+          
+              <div class="item">
+                <img src="img/slide3.png" alt="Los Angeles Hiking">
+              </div>
+            </div>
+
+            <!-- The grid: four columns -->
+        <div class="imageOverlay">
+            <div class="row">
+                <div class="column">
+                    <img src="img/slide1.png" alt="Snow Near Los Angeles Mountain" onclick="gallery(this);">
+                </div>
+                <div class="column">
+                    <img src="img/slide2.png" alt="Los Angeles Weather" onclick="gallery(this);">
+                </div>
+                <div class="column">
+                    <img src="img/slide3.png" alt="Los Angeles Hiking" onclick="gallery(this);">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </div>       
+        <div class="LA-history">
+            <h4>HISTORY</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. 
+                Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim
+                Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue.
+            </p>
+        </div>
+        <div class="number">
+            <h4> 01. </h4>
+        </div>
+    </section>
+    <section id="team">
+        <div class="climb">
+            <div class="number2"> <h4>02.</h4></div>
+            <h4 id="climb-section"> Climb</h4>
+            <p>
+                Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue.
+            </p>
+        </div>
+    </section>
+    <section>
+        <!-- Tabs for Mountain 1 and Mountain 2 -->
+        <body>
+            <!-- If mobile App -->
+            <div class="mobile-display">
+                <button onclick="myAccordion('Mountain1')" class="w3-btn w3-block w3-black w3-left-align" id="accordion">Mountain 1</button>
+                <div id="Mountain1" class="w3-container w3-hide">
+                    <div class="last-section">
+                        <img src="img/background3.png" alt="Mountain with birds" style="width:100%";>
+                        <div class="content">
+                            <h4>Schedule</h4>
+                            <p> 25 Nov 2016     Vestibulum viverra <br>
+                                28 Nov 2016     Vestibulum viverra <br> <br>
+                                18 Dec 2016     Vestibulum viverra<br><br>
+                                7 Jan 2017      Vestibulum viverra
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="myAccordion('Mountain2')" class="w3-btn w3-block w3-black w3-left-align" id="accordion">Mountain 2</button>
+                <div id="Mountain2" class="w3-container w3-hide">
+                    <div class="last-section">
+
+                        <img src="img/background4.png" alt="Mountain Sky" style="width:100%";>
+                        <div class="content">
+                            <h4>Schedule</h4>
+                            <p> 17 Nov 2016     Vestibulum viverra <br><br>
+                                13 Nov 2016     Vestibulum viverra <br> 
+                                28 Dec 2016     Vestibulum viverra<br><br>
+                                9 Jan 2017      Vestibulum viverra
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <script>
+            function myAccordion(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                } else { 
+                x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            </script>
+            <!-- If Website/Other -->
+            <div class="desktop-display">
+                <button class="tablink" onclick="openPage('LA-Mountain', this, '#B0B4BE', '#414f6b')" id="defaultOpen">Covid-19 Food Drive</button>
+                <button class="tablink" onclick="openPage('News', this, '#B0B4BE', '#414f6b')" >Conservation</button>
+                <button class="tablink" onclick="openPage('Birds', this, '#B0B4BE', '#414f6b')" >Ornithology Research</button>
+                <button class="tablink" onclick="openPage('SpecialNeeds', this, '#B0B4BE', '#414f6b')" >Special Needs Livestock Show</button>
+                <button class="tablink" onclick="openPage('Pets', this, '#B0B4BE', '#414f6b')" >Family Pet Initiative</button>
+                
+                <div id="LA-Mountain" class="tabcontent">
+                    <div class="last-section">
+
+                        <img src="img/communityService/covidDonations.jpg" alt="Covid-19 Food Donation Drive" style="width:100%";>
+                        <div class="content">
+                            <h4>Covid-19 Food Drive</h4>
+                            <p> In 2020, our world suffered to a major crisis: the Corona Virus. Millions lost their lives, and millions more lost their jobs. 
+                                As the United States' market fell, the shelves of my local food pantry quickly emptied. Recognizing that families in my community
+                                were in trouble, I led a project to collect food for The Allen Food Pantry. Most stores would not let me set up a food drive due to
+                                social distancing concerns; however, a local Krogers grocery store agreed to let me run a self-service food drive over the weekend.
+                                Over the course of three days, the food drive gathered 207 donations for the Allen Food Pantry. Dropping the donations off was a 
+                                sombering experience, as the donations I had gathered were the only thing filling the shelves.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="News" class="tabcontent">
+                    <div class="last-section">
+
+                        <img src="https://www.allaboutbirds.org/guide/assets/og/75713971-1200px.jpg" alt="Prothonotary Warbler" style="width:100%";>
+                        <div class="content">
+                            <h4>Conservation</h4>
+                            <p> 17 Nov 2016     Vestibulum viverra <br><br>
+                                13 Nov 2016     Vestibulum viverra <br> 
+                                28 Dec 2016     Vestibulum viverra<br><br>
+                                9 Jan 2017      Vestibulum viverra
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="Birds" class="tabcontent">
+                    <div class="last-section">
+                        <!-- Insert background image here -->
+                        <div class="content">
+                            <h4>Ornithology Research</h4>
+                            <p>
+                                Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="SpecialNeeds" class="tabcontent">
+                    <div class="last-section">
+                        <!-- Insert background image here -->
+                        <div class="content">
+                            <h4>Special Needs Livestock Show</h4>
+                            <p>
+                                Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="Pets" class="tabcontent">
+                    <div class="last-section">
+                        <!-- Insert background image here -->
+                        <div class="content">
+                            <h4>Family Pet Initiative</h4>
+                            <p>
+                                Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function openPage(pageName, elmnt, color, txtcolor) {
+                        // Hide all elements with class="tabcontent" by default */
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                        }
+                    
+                        // Remove the background color of all tablinks/buttons
+                        tablinks = document.getElementsByClassName("tablink");
+                        for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                        tablinks[i].style.color = "";
+                        }
+                    
+                        // Show the specific tab content
+                        document.getElementById(pageName).style.display = "block";
+                    
+                        // Add the specific color to the button used to open the tab content
+                        elmnt.style.backgroundColor = color;
+                        elmnt.style.color = txtcolor;
+                    }
+                    
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen").click();
+                </script>
+            </div>
+        </body>
+        
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="column2">
+                <img src="img/Logo.png" alt="Los Angeles Mountains Logo" id="footerLogo">
+                <!-- <img src="img/logo cover.png" id="cover-Logo"> -->
+                <p>LOSANGELES <br>MOUNTAINS</p>
+            </div>
+            <div class="column3">
+                <p>COPYRIGHT 2016. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+

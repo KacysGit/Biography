@@ -1,0 +1,510 @@
+#hero {
+    position:relative;
+}
+
+#baseMountain{
+    position: absolute;
+}
+
+#croppedSky{
+    position: absolute;
+    left: 0;
+    top: 1vh;
+}
+
+#croppedMountain {
+    position: absolute;
+    right: 0;
+    bottom: 1vh;
+}
+
+.centered {
+    position: relative;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -40%);
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+/* LOSANGELES */
+.overlay {
+    position: absolute;
+    bottom: calc(5% + 26vw); /* the vw amount adjusts height */
+    right: calc(7% + 29vw); /* Increase to push left */
+    width: calc(60% + 5vw); /* https://stackoverflow.com/questions/42014594/linear-scaling-between-2-font-sizes-using-calc-and-vw */
+    letter-spacing: calc(0.5vw + 1px);
+    font-size: calc(9vw + 5px); 
+    line-height: 1.2;
+    color: #4d4d4d;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-weight: 700;
+    text-align: right;
+}
+/* MOUNTAIN */
+.overlay2 {
+    position: absolute;
+    bottom: calc(5% + 21vw); /* the vw amount adjusts height */
+    right: calc(7% + 29vw); /* Increase to push left */
+    width: calc(60% + 5vw); 
+    letter-spacing: calc(0.5vw + 1px);
+    font-size: calc(10vw + 5px); 
+    line-height: .5;
+    color: #414f6b;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-weight: 700;
+    text-align: right;
+}
+.initialLogo {
+    position: absolute;
+    bottom: calc(80% + 3vw); /* the vw amount adjusts height */
+    right: calc(87% + 2vw); /* Increase to push left */
+    width: calc(60% + 5vw); 
+    font-size: calc(4vw + 1%); 
+    text-align: right;
+}
+.initialLogo img {
+    size: 10%;
+    width: 6%;
+}
+.overlay3 {
+    position: absolute;
+    bottom: calc(85% + 3vw); /* the vw amount adjusts height */
+    right: calc(7% + 2vw); /* Increase to push left */
+    width: calc(60% + 5vw); 
+    font-size: calc(1vw + 2%); 
+    text-align: right;
+    color: white;
+}
+.overlay3 a {
+    color: white;
+    margin-right: 2%;
+}
+
+/* Navigation Bar */
+
+.navigation a{
+    float:right;
+    padding-top:35px;
+    padding-left:35px;
+    text-decoration: underline;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #101016;
+    font-family: "Arial";
+    font-weight: 900;
+    font-style: italic;
+}
+.navigation img{
+    float:left;
+    
+}
+
+#la {
+    color: #4d4d4d;
+    font-size: calc(1vw + 5px);
+    font-weight: 700;
+    vertical-align: middle;
+    position: sticky;
+    top: 30%;
+    margin-left: 20%;
+}
+#mountain {
+    color: #414f6b;
+    font-size: calc(1vw + 5px);
+    font-weight: 700;
+    position: sticky;
+    top: 52%;
+    left: 8%;
+    letter-spacing: calc(.15vw);
+    margin-left: 20%;
+}
+#navbar img {
+    float: left;
+    padding: 1%;
+    width: calc(6vw + 5px);
+    position: sticky;
+    top: 15%;
+    margin-left: 20%;
+}
+.logo-with-title #la {
+    position: absolute;
+    left: 4.5%;
+    bottom: 150%;
+    color: #4d4d4d;
+    margin-bottom: 1%;
+    font-size: 3vh;
+}
+
+.links {
+    color: #414f6b;
+    margin-right: 2%;
+}
+
+/* Sticky Nav bar from w3 schools */
+#navbar {
+    overflow: hidden;
+    background-color: white;
+    z-index: 100;
+}
+#sticky-links {
+    color: #101016;
+    margin-right: 20%;
+    position: sticky;
+    bottom: 70%;
+    font-size: calc(1vw + 1px);
+}
+  
+/* Navbar links */
+#navbar a {
+    float: right;
+    color: #414f6b;
+    padding: 1%;
+    position: sticky;
+}
+  
+/* Page content */
+  .content {
+    padding: 6px;
+}
+ 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 30px;
+}
+
+/* Create space for the contents of the middle nav bar */
+.middle-nav-bar {
+    margin-top: 2%;
+    justify-content: space-around;
+}
+.second-links {
+    position: absolute;
+    left: 60%;
+    bottom: 200%;
+    text-align: right;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.logo-with-title {
+    position: relative;
+    padding-top: 1%;
+    color: #414f6b;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-size: calc(1vw + 1px);
+    margin-left: 20%;
+    z-index: 1;
+}
+.logo-with-title img {
+    position: absolute;
+    bottom: 100%;
+    float: left;
+    size: 10%;
+    width: 4%;
+}
+
+.logo-with-title #mountain {
+    position: absolute;
+    bottom: 30%;
+    left: 4.5%;
+    font-size: 3vh;
+    letter-spacing: .05vw;
+}
+
+/* Mid Section */
+.mid-section {
+    margin: 0; padding: 0;
+    position: relative;
+    width: 100%; 
+  }
+  
+.mid-section .history {
+    position: absolute;
+    bottom: 50%;
+    right: 2%;
+    color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.history {
+    position: relative;
+}
+.LA-history h4 {
+    position: absolute;
+    top: 8.5%;
+    right: 63%;
+    color: #414f6b;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-size: calc(5vw + 1px); 
+    z-index: 1; /* keeps it at the front of the screen */
+}
+.LA-history p {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+    margin-right: 10%;
+    font-size: calc(1vw);
+    z-index: 1;
+}
+/* The number that is tied with History */
+.number h4 {
+    color: #414f6b81;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-size: calc(11vw + 1px);
+    position: absolute;
+    bottom: 74.5%;
+    left: 5.85%;
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: 1;
+}
+
+/* Image overlay 
+  https://www.w3schools.com/howto/howto_css_image_transparent.asp
+*/
+.mid-section .imageOverlay {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: #414f6bc7; /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+
+.mid-section img {
+    width: 100%;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    flex: 1;
+    max-width: 15%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+  
+/* Style the images inside the grid */
+.column img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+  
+.column img:hover {
+    opacity: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Carousel */
+.carousel-indicators li {
+    background-color: grey !important; /* I used the important tag because I had trouble overriding the color without it*/
+    border: grey !important;
+    position: relative;
+    top: 3vh !important;
+    z-index: 1;
+}
+.carousel-indicators .active {
+    background-color: #fff !important;
+}
+
+.carousel-inner .item.active img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+/* Styling for the carousel control arrows to only display when hovering the cursor over them */
+.carousel-control { /*controls the arrows on the carousel */
+    opacity: 0 !important;
+    transition: opacity 0.5s ease;
+}
+.carousel:hover .carousel-control {
+    opacity: 1 !important;
+}
+    
+
+/* Last Section */
+/* Climb Section */
+.climb {
+    position: relative;
+}
+.climb h4 {
+    position: absolute;
+    top: 20%;
+    left: 23.5%;
+    color: #414f6b;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-size: calc(5vw + 1px); 
+    z-index: 1; /* keeps it at the front of the screen */
+}
+.climb p {
+    position: absolute;
+    bottom: 30%;
+    left: 35%;
+    margin-right: 22%;
+    font-size: calc(1vw);
+}
+.number2 h4 {
+    color: #414f6b81;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-size: calc(11vw + 1px);
+    position: relative; /* uses left/right/top/bottom to move it's position relative to where it started */
+    left: 15%; /* push it from the left */
+    /* z-index: 2; https://www.youtube.com/watch?v=oRbLowjKVzI&t=195s&ab_channel=DaniKrossing */
+}
+
+/* Last Section. Includes Tabs for Mountain 1 and Mountain 2 */
+/* Display Tabs for desktops and acordian for phones */
+.mobile-display{display:none}
+.desktop-display{display:block}
+@media (max-width:800px){
+    .desktop-display {display:none}
+    .mobile-display {display:block}
+}
+/* Mobile App Display */
+#accordion {
+    background-color: #414f6b !important;
+    color: #B0B4BE !important;
+}
+#accordion:hover {
+    background-color: #B0B4BE !important;
+    color: black !important;
+}
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+    height: 30%;
+    margin: 0;
+    font-family: Arial;
+}
+  
+  /* Style tab links */
+.tablink {
+    background-color: #414f6b;
+    color: #B0B4BE;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+  
+.tablink:hover {
+    background-color: #B0B4BE;
+    color: black;
+}
+  
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding-top: 50px;
+    width: 100%;
+}
+  
+#LA-Mountain {background-color: #414f6b;}
+#News {background-color: #414f6b;}
+
+.last-section {
+    position: relative;
+    width: 100%; /* Maximum width */
+}
+  
+.last-section .content {
+    position: absolute;
+    bottom: 25%;
+    right: 55%;
+    background-color: rgba(255, 255, 255, 0.904);
+    color: black;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.content h4 {
+    color: #414f6b;
+    font-family: "novecento-sans-condensed", sans-serif;
+    font-size: calc(3vw + 1px); 
+}
+.content p {
+    font-size: calc(1vw + 1px); 
+}
+  
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #414f6b;
+    font-family: "novecento-sans-condense", sans-serif;
+    font-weight: 700;
+    font-size: calc(1vw);
+    color: #63769D;
+    height: calc(12vh);
+}
+
+.footer img.logo {
+    width: calc(6vw + 5px);
+}
+
+#footerLogo {
+    background-color: #414f6b;
+    opacity: 0.3;
+    size: 10%;
+    width: 15%;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column2 {
+    flex: 1;
+    max-width: 30%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: left;
+    font-size: calc(1vw + 2px);
+}
+.column2 p {
+    margin-left: 2%;
+    font-stretch: extra-condensed;
+}
+.column3{
+    flex: 1;
+    max-width: 25%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 1%;
+}
+  
